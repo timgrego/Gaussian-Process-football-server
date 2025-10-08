@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Game</title>
+    <style>
+        #plotCanvas {
+            border: 1px solid black;
+        }
+        #roomSelection {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #roomSelection button {
+            margin: 0 10px;
+            padding: 10px 20px;
+        }
+        #joinRoomInput {
+            display: none;
+            margin-top: 10px;
+        }
+        #createRoomInput, #joinRoomInput {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="roomSelection">
+        <button id="createRoomBtn">Create Room</button>
+        <button id="joinRoomBtn">Join Room</button>
+        <div id="createRoomInput">
+            <input type="text" id="createRoomIdInput" placeholder="Enter Room ID to create">
+            <button id="submitCreateRoom">Create</button>
+        </div>
+        <div id="joinRoomInput">
+            <input type="text" id="joinRoomIdInput" placeholder="Enter Room ID to join">
+            <button id="submitJoinRoom">Join</button>
+        </div>
+    </div>
+    <canvas id="plotCanvas" width="800" height="600"></canvas>
+    <div id="actionCardsContainer"></div>
+    <script src="config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <!-- Include your JavaScript code here -->
+    <script src="script.js"></script>
+</body>
+</html>
